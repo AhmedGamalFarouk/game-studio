@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background-dark: #1a1a2e; /* Deep dark blue/purple */
+  --background-light: #2a2a4a; /* Slightly lighter dark for contrast */
+  --foreground-primary: #e0e0e0; /* Light grey for primary text */
+  --foreground-secondary: #a0a0a0; /* Darker grey for secondary text */
+  --accent-color: #00f0ff; /* Vibrant cyan for highlights */
+  --glow-color: #00f0ff; /* Same as accent for glowing effects */
+  --border-color: #4a4a6a; /* Subtle border color */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-dark);
+  color: var(--foreground-primary);
+  font-family: 'Orbitron', sans-serif; /* Placeholder for futuristic font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles for a modern gaming aesthetic */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color);
+  font-family: 'Orbitron', sans-serif; /* Placeholder for futuristic font */
+  text-shadow: 0 0 5px var(--glow-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: var(--foreground-primary);
+  text-shadow: 0 0 10px var(--glow-color);
+}
+
+button {
+  background-color: var(--background-light);
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 240, 255, 0.5);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--background-dark);
+  border-color: var(--glow-color);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Utility classes for glowing effects */
+.glow-text {
+  text-shadow: 0 0 8px var(--glow-color);
+}
+
+.glow-border {
+  border: 2px solid var(--glow-color);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
