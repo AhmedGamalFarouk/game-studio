@@ -2,6 +2,11 @@
 
 Welcome to Game Studio, a Next.js application designed to showcase a collection of games, manage a wishlist, and provide information about various game categories.
 
+## Screenshots
+<img width="576" height="328" alt="image" src="https://github.com/user-attachments/assets/a5ec6389-fd91-400c-b1be-37b8dbc2672e" />
+<img width="576" height="328" alt="image" src="https://github.com/user-attachments/assets/4dcdb863-6f40-45f6-990c-0782943b5fbd" />
+
+
 ## Table of Contents
 
 - [Features](#features)
